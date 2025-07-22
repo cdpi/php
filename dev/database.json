@@ -1,0 +1,56 @@
+{
+"types":
+	{
+	"id":
+		{
+		"type": "integer",
+		"size": null,
+		"null": false
+		},
+	"string-50-not-null":
+		{
+		"type": "string",
+		"size": 50,
+		"null": false
+		}
+	},
+"tables":
+	{
+	"contact":
+		{
+		"_columns":
+			{
+			"id": "$id",
+			"firstname": "$string-50-not-null",
+			"lastname": "$string-50-not-null"
+			},
+		"columns":
+			{
+			"id":
+				{
+				"type": "integer",
+				"size": null,
+				"null": false
+				},
+			"firstname":
+				{
+				"type": "string",
+				"size": 50,
+				"null": false
+				},
+			"lastname":
+				{
+				"type": "string",
+				"size": 50,
+				"null": false
+				},
+			"email":
+				{
+				"type": "string",
+				"size": 80,
+				"null": true
+				}
+			}
+		}
+	}
+}
