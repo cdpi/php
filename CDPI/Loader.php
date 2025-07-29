@@ -1,6 +1,6 @@
 <?php
 
-namespace Monk;
+namespace CDPI;
 
 /**
  * <h1>Loader</h1>

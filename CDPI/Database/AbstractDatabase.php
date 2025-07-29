@@ -1,37 +1,30 @@
 <?php
 
-namespace Monk;
+namespace CDPI\Database;
 
-use \PDO, \SplFileInfo;
+use \PDO;
 
-use function \call_user_func, \sprintf;
+use function \call_user_func;
 
 /**
- * <h1>SQLite</h1>
+ * <h1>AbstractDatabase</h1>
  * 
  * @version 0.1.0
  * @since 0.1.0
  */
-class SQLite
+abstract class AbstractDatabase
 	{
-	//SQLiteSchema.php
-	//sqlite:/opt/databases/mydb.sq3
-	//sqlite::memory:
-	//sqlite:
+	use QueryInto;
 
 	protected PDO $pdo;
 
-	/**
-	 * @since 0.1.0
-	 */
-	public function __construct(SplFileInfo|string $file)
+	/*
+	public function __construct()
 		{
-		$path = ($file instanceof SplFileInfo) ? $file->getRealPath() : $file;
-
-		$this->pdo = new PDO(sprintf('sqlite:%s', $path));
-
-		$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		//$this->pdo = new PDO(sprintf('sqlite:%s', $path));
+		//$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		}
+	*/
 
 	/**
 	 * @since 0.1.0
@@ -81,13 +74,5 @@ class SQLite
 			// TODO: Throw
 			throw $throwable;
 			}
-
-		//return null;
 		}
-
-	/*
-	public function __invoke(callable $code, int $n = 100000):float
-		{
-		}
-	*/
 	}

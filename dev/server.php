@@ -2,7 +2,7 @@
 
 class DevServer
 	{
-	use \Monk\Server;
+	use \CDPI\Server;
 	}
 
 $server = new DevServer();

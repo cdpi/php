@@ -31,7 +31,7 @@ application/xml 0.9
 // var_dump($accept); OK
 */
 
-final class TestRequest extends \Monk\Request
+final class TestRequest extends \CDPI\Request
 	{
 	public function __invoke():void
 		{

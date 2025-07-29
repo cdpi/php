@@ -1,6 +1,6 @@
 <?php
 
-namespace Monk\Database\Generator;
+namespace CDPI\Database\Schema;
 
 /**
  * <h1>Schema</h1>
@@ -10,21 +10,38 @@ namespace Monk\Database\Generator;
  */
 class Schema
 	{
-	use \Monk\JSON;
+	use \CDPI\JSON;
 
 	private array $tables = array();
 	private array $types = array();
 
+	/**
+	 * @since 0.1.0
+	 */
 	public function getTable(string $name):Table
 		{
 		return $this->tables[$name];
 		}
 
+	/**
+	 * @since 0.1.0
+	 */
+	public function getTables():array
+		{
+		return $this->tables;
+		}
+
+	/**
+	 * @since 0.1.0
+	 */
 	public function getType(string $name):Type
 		{
 		return $this->types[$name];
 		}
 
+	/**
+	 * @since 0.1.0
+	 */
 	public static function read(string $path):Schema
 		{
 		// TODO: IO

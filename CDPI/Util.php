@@ -1,6 +1,6 @@
 <?php
 
-namespace Monk;
+namespace CDPI;
 
 use function \strcasecmp;
 

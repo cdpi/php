@@ -1,5 +1,5 @@
 <?php
 
-$form = new \Monk\Form();
+$form = new \CDPI\Form();
 
 $form->button('dfsf dfd f');

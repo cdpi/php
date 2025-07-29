@@ -1,6 +1,6 @@
 <?php
 
-class TestCalendar extends \Monk\Calendar
+class TestCalendar extends \CDPI\Calendar
 	{
 	public function __construct()
 		{

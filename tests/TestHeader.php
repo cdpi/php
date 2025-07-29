@@ -2,7 +2,7 @@
 
 final class TestHeader
 	{
-	use \Monk\Header;
+	use \CDPI\Header;
 
 	public function __invoke():void
 		{

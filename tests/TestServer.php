@@ -2,7 +2,7 @@
 
 final class TestServer
 	{
-	use \Monk\Server;
+	use \CDPI\Server;
 
 	public function __invoke():void
 		{

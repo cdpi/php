@@ -1,6 +1,6 @@
 <?php
 
-namespace Monk;
+namespace CDPI\Web;
 
 // TODO: register_shutdown_function Pas affecté par max_execution_time :-) tester si script infini possible
 
@@ -22,17 +22,34 @@ class WebSite
 	/**
 	 * @since 0.1.0
 	 */
+	public final function getLastError():array|null
+		{
+		// type
+		// message
+		// file
+		// line
+		return \error_get_last();
+		}
+
+	/**
+	 * @since 0.1.0
+	 */
+	public final function warn(string $message):void
+		{
+		\trigger_error($message, \E_USER_WARNING);
+		}
+
+	/*
 	public final function __invoke():void
 		{
 		throw new \RuntimeException('WebSite::__invoke()');
 
-		/*
 		$request = new Request();
 
 		if ($request->isGET())
 			{
 			echo 'GET';
 			}
-		*/
 		}
+	*/
 	}

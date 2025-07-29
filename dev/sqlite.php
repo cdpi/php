@@ -1,23 +1,22 @@
 <?php
 
-class DevDB extends \Monk\SQLite
+/*
+var_dump(DATABASE);
+
+class DevDB extends \CDPI\Database\SQLite
 	{
-	use \Monk\QueryInto;
+	use \CDPI\Database\QueryInto;
 
 	public function __construct()
 		{
-		parent::__construct(new SplFileInfo(__DIR__ . DIRECTORY_SEPARATOR . 'database.sqlite'));
+		parent::__construct(new SplFileInfo(DATABASE));
 		}
 	}
+*/
 
-// TODO: Nul, pas en dur chemin fichier !!!!!!!
-//$sqlite = new \Monk\SQLite(new SplFileInfo('./dev/database.sqlite'));
-//$sqlite = new \Monk\SQLite(new SplFileInfo(__DIR__ . DIRECTORY_SEPARATOR . 'database.sqlite'));
 //$sqlite->transaction(function() use ($sqlite){});
 //$sql = 'INSERT INTO `data`(`x`, `y`, `z`) VALUES(:x, :y, :z);';
 //$sqlite->execute($sql, [':x' => 42.0, ':y' => null, ':z' => 'XYZ']);
-//$records = $sqlite->queryAll('SELECT `id`, `x`, `y`, `z` FROM `data`;');
-//var_dump($records);
 
 class Data
 	{
@@ -29,10 +28,13 @@ class Data
 
 $data = new Data();
 
-$data->__invoke = function():void
-	{
-	var_dump($this);
-	};
+$database = new \CDPI\Database\SQLite(new SplFileInfo(DATABASE));
+
+// OK
+//$records = $database->queryAll('SELECT `id`, `x`, `y`, `z` FROM `data`;');
+//var_dump($records);
+
+//$database->queryInto('SELECT `id`, `x`, `y`, `z` FROM `data`;', [], $data);
 
 function printData():void
 	{
@@ -40,9 +42,4 @@ function printData():void
 	var_dump($data);
 	}
 
-$database = new DevDB();
-
-
-$database->queryInto('SELECT `id`, `x`, `y`, `z` FROM `data`;', [], $data);
-
-$database->queryAllInto('SELECT `id`, `x`, `y`, `z` FROM `data`;', $data, $data->__invoke);
+$database->queryAllInto('SELECT `id`, `x`, `y`, `z` FROM `data`;', $data, 'printData');

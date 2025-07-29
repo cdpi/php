@@ -1,6 +1,6 @@
 <?php
 
-namespace Monk\Database\Generator;
+namespace CDPI\Database\Schema;
 
 /**
  * <h1>SchemaInterface</h1>
@@ -10,7 +10,10 @@ namespace Monk\Database\Generator;
  */
 interface SchemaInterface
 	{
+	/**
+	 * @since 0.1.0
+	 */
 	public function quote(string $name):string;
 
-	public function mapType(string $type, int|null $size):string;
+	//public function mapType(string $type, int|null $size):string;
 	}

@@ -1,6 +1,6 @@
 <?php
 
-use \Monk\Database\Generator\Schema;
+use \CDPI\Database\Generator\Schema;
 
 class TestDatabaseGenerator
 	{

@@ -10,19 +10,23 @@
 
 require_once 'bootstrap.php';
 
-// Bug...
-//$benchmark = new \Monk\Benchmark();
-
+// En cours
 //include 'dev/server.php';
-//include 'dev/sqlite.php';
+//include 'dev/html.php';
+//include 'dev/form.php';
+include 'dev/sqlite.php';
+//include 'dev/schema.php';
+//include 'dev/website.php';
+
+// Pas commencé
 //include 'dev/ob.php';
 //include 'dev/filter.php';
 //include 'dev/formatter.php';
-//include 'dev/html.php';
-//include 'dev/form.php';
 //include 'dev/calendar.php';
 
-include 'dev/monk.php';
+// Bug
+//$benchmark = new \Monk\Benchmark();
+//include 'dev/calendar-benchmark.php';
 
 ?>
 

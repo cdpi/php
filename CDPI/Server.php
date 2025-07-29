@@ -1,6 +1,6 @@
 <?php
 
-namespace Monk;
+namespace CDPI;
 
 /**
  * <h1>Server</h1>

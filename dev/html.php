@@ -2,7 +2,7 @@
 
 class DevHTML
 	{
-	use \Monk\HTML;
+	use \CDPI\HTML;
 	}
 
 $html = new DevHTML();

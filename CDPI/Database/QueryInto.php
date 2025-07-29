@@ -1,6 +1,6 @@
 <?php
 
-namespace Monk;
+namespace CDPI\Database;
 
 use \PDO;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Monk;
+namespace CDPI;
 
 use function \array_merge as merge, \array_reduce as reduce, \floatval as toFloat;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Monk;
+namespace CDPI;
 
 use function \array_key_exists, \strcasecmp;
 
@@ -19,6 +19,7 @@ class Request extends Util
 	 */
 	public final function getMethod():string|null
 		{
+		//static $method = $this->getRequestMethod();
 		return $this->getRequestMethod();
 		}
 
